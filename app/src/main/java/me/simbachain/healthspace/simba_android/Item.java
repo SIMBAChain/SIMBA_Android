@@ -15,6 +15,12 @@ public class Item {
     @Expose
     private String comments;
 
+    public Item (String description, String status, String comments) {
+        this.description = description;
+        this.status = status;
+        this.comments = comments;
+    }
+
     public String getDescription() {
         return description;
     }

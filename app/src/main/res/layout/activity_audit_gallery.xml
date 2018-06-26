@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    tools:context=".PostActivity">
+
+    <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="#0000"
+        android:text="@string/back_button"
+        android:textColor="@color/colorBlue"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangle"
+        app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="330sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle"
+        app:layout_constraintVertical_bias="0.029">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/AuditNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audit_no2"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editAuditNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/PosterID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/poster_no2"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editPosterID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/IPFS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ipfs"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editIPFS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/TimeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timestamp"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editTimeStamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15"/>
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:background="@color/colorWhite"
+                android:ems="15" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="15"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comments"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editComment"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@color/colorWhite"
+                android:ems="15"/>
+
+        </TableRow>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30sp"/>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="55sp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow>
+            <Space
+                android:layout_width="50sp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/IncorrectButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/incorrect_button"
+                android:text="@string/incorrect"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"/>
+
+            <Space
+                android:layout_height="match_parent"
+                android:layout_width="100sp"/>
+
+            <Button
+                android:id="@+id/CorrectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/correct_button"
+                android:text="@string/correct"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_height="match_parent"
+                android:layout_width="50sp"/>
+
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp"/>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verification"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editVerification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="10"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/FirstAuditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/firstauditor"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editFirstAuditor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="10"/>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5sp"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="18sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/SecondAuditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/secondauditor"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/editSecondAuditor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:ems="10"/>
+
+        </TableRow>
+
+    </TableLayout>
+    <Spinner
+        android:id="@+id/user_id"
+        android:layout_width="200sp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -11,15 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="me.simbachain.healthspace.simba_android.TitleScreen">
+        <activity android:name=".TitleScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="me.simbachain.healthspace.simba_android.PostActivity" />
-        <activity android:name="me.simbachain.healthspace.simba_android.AuditActivity"></activity>
+        <activity android:name=".PostActivity" />
+        <activity android:name=".AuditActivity" />
+        <activity android:name=".AuditGalleryActivity"></activity>
     </application>
 
 </manifest>

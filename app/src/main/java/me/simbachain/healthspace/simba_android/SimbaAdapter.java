@@ -1,15 +1,20 @@
 package me.simbachain.healthspace.simba_android;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
+
+import org.apache.commons.logging.Log;
 
 import java.util.List;
 
@@ -29,6 +34,7 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
 
         TextView hashId;
         TextView auditor;
+        RelativeLayout parentLayout;
 
         SimbaViewHolder(View v) {
             super(v);
@@ -36,6 +42,7 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
 
             hashId = mView.findViewById(R.id.hashId);
             auditor = mView.findViewById(R.id.auditor);
+            parentLayout = v.findViewById(R.id.parent_layout);
         }
     }
 
@@ -47,9 +54,19 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
     }
 
     @Override
-    public void onBindViewHolder(SimbaViewHolder holder, int position) {
-        holder.hashId.setText("Audit No. " + data.get(position).getAsset().getItems());
+    public void onBindViewHolder(SimbaViewHolder holder, final int position) {
+        holder.hashId.setText("Audit No. " + data.get(position).getHashIdInString());
         holder.auditor.setText("Poster ID: " + data.get(position).getAuditor());
+
+        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, AuditGalleryActivity.class);
+                intent.putExtra("audit_no", data.get(position).getHashId());
+                intent.putExtra("ipfc", data.get(position).getHash());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

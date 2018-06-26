@@ -13,6 +13,15 @@
     <string name="most_recent">Most Recent Audits</string>
     <string name="audit_no">Audit No. </string>
     <string name="poster_no">Poster ID </string>
+    <string name="audit_no2">Audit No.</string>
+    <string name="poster_no2">Poster ID</string>
+    <string name="ipfs">IPFS</string>
+    <string name="timestamp">TimeStamp</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="correct">Correct</string>
+    <string name="verification">Verification Status</string>
+    <string name="firstauditor">First Auditor</string>
+    <string name="secondauditor">Second Auditor</string>
     <string-array name="user_accounts">
         <item>Account1: ******f625</item>
         <item>Account2: ******1457</item>
@@ -24,17 +33,5 @@
         <item>Account8: ******dd25</item>
         <item>Account9: ******08bc</item>
         <item>Account10: ******5b05</item>
-    </string-array>
-    <string-array name="account_ids">
-            <item>0xb1db8a003114ee270207e8812a009f108b41f625</item>
-            <item>0x9ccd1bb0d58a9ce5db012ff74967edb371a91457</item>
-            <item>0x0a69fcf74245459a1883485a4e4f23bb3b552370</item>
-            <item>0x442fd3df4845b53afa13eae0051429b912bb4205</item>
-            <item>0x818ce4fb076ef541457f22b955af6bfa046c6e37</item>
-            <item>0x2ba1d9aba1f0b1b12ad1b48a9c7cf327f1d17180</item>
-            <item>0xad267928e21fe2bdd09417b20b6b8b0fa767c453</item>
-            <item>0x4324ca587090d5d77942531cc18adde45836dd25</item>
-            <item>0x647102ec4e63f571971e75ba4c5493a636af08bc</item>
-            <item>0xd8e00bdfc99738a223db7821281d52de59c25b05</item>
     </string-array>
 </resources>

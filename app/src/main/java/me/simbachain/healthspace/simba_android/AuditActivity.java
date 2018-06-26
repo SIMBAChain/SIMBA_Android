@@ -26,16 +26,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AuditActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
-    ProgressDialog progressDoalog;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audit);
 
-        progressDoalog = new ProgressDialog(AuditActivity.this);
-        progressDoalog.setMessage("Loading....");
-        progressDoalog.show();
+
+        progressDialog = new ProgressDialog(AuditActivity.this);
+        progressDialog.setMessage("Loading....");
+        progressDialog.show();
 
         OkHttpClient httpClient = new OkHttpClient.Builder().build();
 
@@ -49,7 +50,7 @@ public class AuditActivity extends AppCompatActivity {
 
         final SimbaClient client = retrofit.create(SimbaClient.class);
 
-        Call<List<GetSimba>> call = client.testThing();
+        Call<List<GetSimba>> call = client.getAudits();
 
         Button toBack = findViewById(R.id.back_button);
         mRecyclerView = findViewById(R.id.my_recycler_view);
@@ -57,13 +58,13 @@ public class AuditActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<GetSimba>>() {
             @Override
             public void onResponse(Call<List<GetSimba>> call, Response<List<GetSimba>> response) {
-                progressDoalog.dismiss();
+                progressDialog.dismiss();
                 generateDataList(response.body());
             }
 
             @Override
             public void onFailure(Call<List<GetSimba>> call, Throwable t) {
-                progressDoalog.dismiss();
+                progressDialog.dismiss();
                 System.out.println(t);
                 Toast.makeText(AuditActivity.this, "Something went wrong. Check your internet connection."
                         , Toast.LENGTH_SHORT).show();

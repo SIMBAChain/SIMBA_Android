@@ -46,7 +46,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         TitleScreen.accountID = accounts[pos];
-        Toast.makeText(this, "Your Accound ID is: " + TitleScreen.accountID, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Your Account ID is: " + TitleScreen.accountID, Toast.LENGTH_LONG).show();
         Log.i("PostActivity", "ID is " + TitleScreen.accountID);
     }
     public void onNothingSelected(AdapterView<?> parent) {
