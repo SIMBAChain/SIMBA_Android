@@ -161,17 +161,23 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
     public void generateVerification(List<Verification> dataList) {
         TextView firstaudit = findViewById(R.id.editFirstAuditor);
         TextView secondaudit = findViewById(R.id.editSecondAuditor);
+        Button incorrect = findViewById(R.id.IncorrectButton);
+        Button correct = findViewById(R.id.CorrectButton);
 
         if(!dataList.isEmpty()) {
             for(int i = 0; i <= dataList.size()-1; i++) {
                 if(i == 0) {
                     firstaudit.setText(dataList.get(i).getVerification().toString());
-                    firstAuditor = dataList.get(i).getVerification().toString();
+                    firstAuditor = dataList.get(i).getAuditor();
                     System.out.println(firstAuditor);
                 }
                 else if (i == 1) {
                     secondaudit.setText(dataList.get(i).getVerification().toString());
-                    secondAuditor = dataList.get(i).getVerification().toString();
+                    secondAuditor = dataList.get(i).getAuditor();
+                    incorrect.setEnabled(false);
+                    incorrect.setVisibility(View.GONE);
+                    correct.setEnabled(true);
+                    correct.setVisibility(View.GONE);
                     System.out.println(secondAuditor);
                 }
             }

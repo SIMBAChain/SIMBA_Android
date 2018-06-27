@@ -20,6 +20,13 @@ public class Asset {
     @Expose
     private List<Item> items = null;
 
+    public Asset(String location, String timestamp, String personName, List<Item> items) {
+        this.location = location;
+        this.timestamp = timestamp;
+        this.personName = personName;
+        this.items = items;
+    }
+
     public String getLocation() {
         return location;
     }

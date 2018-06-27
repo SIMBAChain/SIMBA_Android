@@ -25,6 +25,8 @@ public class GetSimba {
     @Expose
     private List<Verification> verifications = null;
 
+
+
     public Integer getHashId() {
         return hashId;
     }
