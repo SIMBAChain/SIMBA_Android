@@ -29,6 +29,7 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/imageView"
             android:text="Title"
+            android:fontFamily="@font/fontavenirnext"
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -39,6 +40,7 @@
             android:layout_below="@+id/hashId"
             android:layout_toRightOf="@+id/imageView"
             android:text="Description"
+            android:fontFamily="@font/fontavenirnext"
             android:textColor="#000000"
             android:textSize="20sp"/>
 

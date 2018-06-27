@@ -8,10 +8,17 @@
     tools:context=".PostActivity">
 
     <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/coldaltitudeclouds" />
+
+    <ImageView
         android:id="@+id/rectangle"
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="8sp"
         android:src="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,71 +27,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/simbalogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8sp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/simbalogowh2"
+        android:scaleX="0.9"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle" />
+
     <Button
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="8sp"
         android:background="#0000"
         android:text="@string/back_button"
         android:textColor="@color/colorBlue"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        android:fontFamily="@font/fontavenirnext"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle"
         app:layout_constraintEnd_toEndOf="@+id/rectangle"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/rectangle"
         app:layout_constraintTop_toTopOf="@+id/rectangle" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
-        android:text="@string/healthspace_records"
-        android:textColor="#000"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
-        android:text="@string/hs_records_desc"
-        android:textColor="#000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.033" />
 
     <Button
         android:id="@+id/postButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginStart="8sp"
         android:layout_marginTop="10sp"
         android:background="@drawable/post_button"
         android:text="@string/post_button"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
+        android:fontFamily="@font/fontavenirnext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
         app:layout_constraintVertical_bias="0.0"
         android:gravity="center"/>
 
@@ -92,14 +82,14 @@
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="300sp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8sp"
+        android:layout_marginTop="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postButton"
-        app:layout_constraintVertical_bias="0.029"
+        app:layout_constraintTop_toBottomOf="@+id/simbalogo"
+        app:layout_constraintVertical_bias="0.0"
         android:gravity="center">
 
         <TableRow
@@ -116,8 +106,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/location"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:fontFamily="@font/fontavenirnext"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
 
             <Space
                 android:layout_width="20sp"
@@ -126,10 +117,12 @@
             <EditText
                 android:id="@+id/editLocation"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -151,8 +144,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -161,10 +155,12 @@
             <EditText
                 android:id="@+id/editName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:ems="10"
-                android:inputType="text" />
+                android:textSize="20sp"
+                android:inputType="text"
+                android:fontFamily="@font/fontavenirnext"/>
         </TableRow>
 
         <Space
@@ -185,8 +181,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -198,7 +195,9 @@
                 android:layout_height="100sp"
                 android:background="@color/colorWhite"
                 android:ems="10"
-                android:inputType="text" />
+                android:textSize="20sp"
+                android:inputType="text"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -220,8 +219,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -230,10 +230,12 @@
             <EditText
                 android:id="@+id/editStatus"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:ems="10"
-                android:inputType="text" />
+                android:textSize="20sp"
+                android:inputType="text"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -255,8 +257,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/comments"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -268,7 +271,9 @@
                 android:layout_height="80sp"
                 android:background="@color/colorWhite"
                 android:ems="10"
-                android:inputType="text" />
+                android:textSize="20sp"
+                android:inputType="text"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
     </TableLayout>
@@ -281,6 +286,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@color/colorWhite"
+        android:fontFamily="@font/fontavenirnext"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

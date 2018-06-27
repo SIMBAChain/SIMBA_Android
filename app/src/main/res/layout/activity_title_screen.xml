@@ -24,11 +24,12 @@
         android:id="@+id/simbalogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/simbalogowh2"
+        android:layout_marginTop="40dp"
         android:foregroundGravity="center"
+        android:scaleX="0.9"
+        android:src="@drawable/simbalogowh2"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangle"
         app:layout_constraintVertical_bias="0.0" />
@@ -40,7 +41,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="30sp"
         android:layout_marginStart="64sp"
-        android:layout_marginTop="220sp"
+        android:layout_marginTop="40sp"
         android:background="@drawable/post_button"
         android:text="@string/post_button"
         android:textColor="@color/colorWhite"
@@ -48,8 +49,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/toAudit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/simbalogo"
+        app:layout_constraintVertical_bias="0.0"
+        android:fontFamily="@font/fontavenirnext"/>
 
     <Button
         android:id="@+id/toAudit"
@@ -58,7 +60,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="64sp"
         android:layout_marginStart="30sp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="40sp"
         android:background="@drawable/incorrect_button"
         android:text="@string/audit_button"
         android:textSize="20sp"
@@ -67,8 +69,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/toPost"
-        app:layout_constraintTop_toBottomOf="@+id/rectangle"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/simbalogo"
+        app:layout_constraintVertical_bias="0.0"
+        android:fontFamily="@font/fontavenirnext"/>
 
     <Spinner
         android:id="@+id/user_id"
@@ -82,6 +85,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/fontavenirnext"/>
 
 </android.support.constraint.ConstraintLayout>

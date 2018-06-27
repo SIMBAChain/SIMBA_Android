@@ -8,6 +8,12 @@
     tools:context=".PostActivity">
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/darkclouds"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
         android:id="@+id/rectangle"
         android:layout_width="match_parent"
         android:layout_height="50sp"
@@ -28,7 +34,8 @@
         android:background="#0000"
         android:text="@string/back_button"
         android:textColor="@color/colorBlue"
-        android:textSize="15sp"
+        android:textSize="18sp"
+        android:fontFamily="@font/fontavenirnext"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle"
         app:layout_constraintEnd_toEndOf="@+id/rectangle"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,9 +46,9 @@
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
-        android:layout_height="350sp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="8sp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,8 +72,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/audit_no2"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/fontavenirnext"
+                android:textSize="20sp" />
 
             <Space
                 android:layout_width="20sp"
@@ -75,10 +83,12 @@
             <TextView
                 android:id="@+id/editAuditNumber"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
+                android:fontFamily="@font/fontavenirnext"
+                android:textSize="20sp"
                 android:textColor="#000000"
-                android:ems="15" />
+                android:ems="10" />
 
         </TableRow>
 
@@ -100,8 +110,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/poster_no2"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -110,10 +121,12 @@
             <TextView
                 android:id="@+id/editPosterID"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15"/>
+                android:textSize="14sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -135,8 +148,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ipfs"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -145,10 +159,12 @@
             <TextView
                 android:id="@+id/editIPFS"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15" />
+                android:textSize="14sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -170,8 +186,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/timestamp"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -180,10 +197,12 @@
             <TextView
                 android:id="@+id/editTimeStamp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15" />
+                android:textSize="20sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -205,8 +224,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/location"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -215,10 +235,12 @@
             <TextView
                 android:id="@+id/editLocation"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15"/>
+                android:textSize="20sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -240,8 +262,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -250,10 +273,12 @@
             <TextView
                 android:id="@+id/editName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15"/>
+                android:textSize="20sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
         </TableRow>
 
         <Space
@@ -274,8 +299,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -287,7 +313,9 @@
                 android:layout_height="60sp"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15" />
+                android:textSize="15sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -309,8 +337,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -319,10 +348,12 @@
             <TextView
                 android:id="@+id/editStatus"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15"/>
+                android:textSize="20sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -344,8 +375,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/comments"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -357,7 +389,9 @@
                 android:layout_height="70sp"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="15"/>
+                android:textSize="15sp"
+                android:ems="10"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
     </TableLayout>
@@ -385,7 +419,8 @@
                 android:background="@drawable/incorrect_button"
                 android:text="@string/incorrect"
                 android:textColor="@color/colorWhite"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_height="match_parent"
@@ -398,7 +433,8 @@
                 android:background="@drawable/correct_button"
                 android:text="@string/correct"
                 android:textColor="@color/colorWhite"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -409,7 +445,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="120sp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -431,8 +467,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/verification"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -441,10 +478,12 @@
             <TextView
                 android:id="@+id/editVerification"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="10" />
+                android:textSize="20sp"
+                android:ems="6"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -466,8 +505,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/firstauditor"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -476,10 +516,12 @@
             <TextView
                 android:id="@+id/editFirstAuditor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="10" />
+                android:textSize="20sp"
+                android:ems="6"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -501,8 +543,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/secondauditor"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="@font/fontavenirnext"/>
 
             <Space
                 android:layout_width="20sp"
@@ -511,10 +554,12 @@
             <TextView
                 android:id="@+id/editSecondAuditor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:textColor="#000000"
-                android:ems="10" />
+                android:textSize="20sp"
+                android:ems="6"
+                android:fontFamily="@font/fontavenirnext"/>
 
         </TableRow>
 
@@ -528,6 +573,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@color/colorWhite"
+        android:fontFamily="@font/fontavenirnext"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
