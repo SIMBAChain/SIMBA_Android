@@ -33,6 +33,9 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             "0xad267928e21fe2bdd09417b20b6b8b0fa767c453", "0x4324ca587090d5d77942531cc18adde45836dd25",
             "0x647102ec4e63f571971e75ba4c5493a636af08bc", "0xd8e00bdfc99738a223db7821281d52de59c25b05"};
     ProgressDialog progressDialog;
+    static String firstAuditor = null;
+    static String secondAuditor = null;
+    static int auditNo = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,10 +75,13 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
     public void onNothingSelected(AdapterView<?> parent) {}
 
     private void getIncomingIntent() {
-        if(getIntent().hasExtra("audit_no") && getIntent().hasExtra("ipfc")) {
+        if(getIntent().hasExtra("audit_no") && getIntent().hasExtra("ipfc") && getIntent().hasExtra("verified")) {
 
             int auditNumber = getIntent().getIntExtra("audit_no", 0);
             String IPFC = getIntent().getStringExtra("ipfc");
+            String Verified = getIntent().getStringExtra("verified");
+
+            auditNo = auditNumber;
 
             OkHttpClient httpClient = new OkHttpClient.Builder().build();
 
@@ -89,14 +95,29 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
 
             final SimbaClient client = retrofit.create(SimbaClient.class);
 
-            setIncomingIntent(auditNumber, IPFC);
+            setIncomingIntent(auditNumber, IPFC, Verified);
             Call<List<GetSimba>> call = client.getAuditItems(auditNumber);
 
             call.enqueue(new Callback<List<GetSimba>>() {
                 @Override
                 public void onResponse(Call<List<GetSimba>> call, Response<List<GetSimba>> response) {
-                    progressDialog.dismiss();
                     generateData(response.body());
+                    Call<List<Verification>> verify = client.getAuditVerifications(auditNo);
+                    verify.enqueue(new Callback<List<Verification>>() {
+                        @Override
+                        public void onResponse(Call<List<Verification>> call, Response<List<Verification>> response) {
+                            progressDialog.dismiss();
+                            generateVerification(response.body());
+                        }
+
+                        @Override
+                        public void onFailure(Call<List<Verification>> call, Throwable t) {
+                            progressDialog.dismiss();
+                            System.out.println(t);
+                            Toast.makeText(AuditGalleryActivity.this, "Something went wrong. " +
+                                    "Check your internet connection.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
 
                 @Override
@@ -107,15 +128,18 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
                                     "Check your internet connection.", Toast.LENGTH_SHORT).show();
                 }
             });
+
         }
     }
-    private void setIncomingIntent(int audit, String ipfc) {
+    private void setIncomingIntent(int audit, String ipfc, String verified) {
 
         TextView auditNumber = findViewById(R.id.editAuditNumber);
         TextView IPFC = findViewById(R.id.editIPFS);
+        TextView Verified = findViewById(R.id.editVerification);
 
         auditNumber.setText(audit+"");
         IPFC.setText(ipfc);
+        Verified.setText(verified);
     }
     public void generateData(List<GetSimba> dataList) {
         TextView posterID = findViewById(R.id.editPosterID);
@@ -133,5 +157,24 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
         description.setText(dataList.get(0).getAsset().getItems().get(0).getDescription());
         status.setText(dataList.get(0).getAsset().getItems().get(0).getStatus());
         comments.setText(dataList.get(0).getAsset().getItems().get(0).getComments());
+    }
+    public void generateVerification(List<Verification> dataList) {
+        TextView firstaudit = findViewById(R.id.editFirstAuditor);
+        TextView secondaudit = findViewById(R.id.editSecondAuditor);
+
+        if(!dataList.isEmpty()) {
+            for(int i = 0; i <= dataList.size()-1; i++) {
+                if(i == 0) {
+                    firstaudit.setText(dataList.get(i).getVerification().toString());
+                    firstAuditor = dataList.get(i).getVerification().toString();
+                    System.out.println(firstAuditor);
+                }
+                else if (i == 1) {
+                    secondaudit.setText(dataList.get(i).getVerification().toString());
+                    secondAuditor = dataList.get(i).getVerification().toString();
+                    System.out.println(secondAuditor);
+                }
+            }
+        }
     }
 }

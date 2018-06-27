@@ -14,5 +14,5 @@ public interface SimbaClient {
     Call<List<GetSimba>> getAudits();
 
     @GET("audit/{auditId}/verifications")
-    Call<List<GetSimba>>  getAuditVerifications(@Path("auditId") int auditId);
+    Call<List<Verification>>  getAuditVerifications(@Path("auditId") int auditId);
 }

@@ -64,6 +64,7 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
                 Intent intent = new Intent(context, AuditGalleryActivity.class);
                 intent.putExtra("audit_no", data.get(position).getHashId());
                 intent.putExtra("ipfc", data.get(position).getHash());
+                intent.putExtra("verified", data.get(position).getVerified());
                 context.startActivity(intent);
             }
         });
