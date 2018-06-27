@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TitleScreen"
-    android:background="@color/colorGrey">
+    tools:context=".TitleScreen">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/altitudeclearsky" />
 
     <ImageView
         android:id="@+id/rectangle"
@@ -13,49 +20,46 @@
         android:layout_height="50sp"
         android:src="@drawable/rectangle" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <ImageView
+        android:id="@+id/simbalogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/app_name"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/simbalogowh2"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/toPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4sp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorBlue"
+        android:layout_marginEnd="30sp"
+        android:layout_marginStart="64sp"
+        android:layout_marginTop="220sp"
+        android:background="@drawable/post_button"
         android:text="@string/post_button"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/toAudit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/toAudit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginStart="4sp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorRed"
+        android:layout_marginEnd="64sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/incorrect_button"
         android:text="@string/audit_button"
         android:textSize="20sp"
         android:textColor="@color/colorWhite"
@@ -63,8 +67,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/toPost"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/user_id"
