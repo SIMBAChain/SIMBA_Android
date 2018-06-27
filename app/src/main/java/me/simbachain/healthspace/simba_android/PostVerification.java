@@ -3,10 +3,18 @@ package me.simbachain.healthspace.simba_android;
 public class PostVerification {
 
     private String accountId;
-    private String verification;
+    private boolean verification;
 
-    public PostVerification(String accountId, String verification) {
+    public PostVerification(String accountId, boolean verification) {
         this.accountId = accountId;
         this.verification = verification;
+    }
+
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public String getPostedVerification() {
+        return Boolean.toString(verification);
     }
 }

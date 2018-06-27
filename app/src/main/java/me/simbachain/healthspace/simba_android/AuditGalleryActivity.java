@@ -33,9 +33,11 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             "0xad267928e21fe2bdd09417b20b6b8b0fa767c453", "0x4324ca587090d5d77942531cc18adde45836dd25",
             "0x647102ec4e63f571971e75ba4c5493a636af08bc", "0xd8e00bdfc99738a223db7821281d52de59c25b05"};
     ProgressDialog progressDialog;
-    static String firstAuditor = null;
-    static String secondAuditor = null;
+    static String firstAuditor = "";
+    static String secondAuditor = "";
     static int auditNo = 0;
+    static String auditor = "";
+    static String postedVerification = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
 
         Button toBack = findViewById(R.id.back_button);
         Spinner userID = findViewById(R.id.user_id);
+        Button incorrect = findViewById(R.id.IncorrectButton);
+        Button correct = findViewById(R.id.CorrectButton);
 
         progressDialog = new ProgressDialog(AuditGalleryActivity.this);
         progressDialog.setMessage("Loading....");
@@ -64,6 +68,56 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AuditGalleryActivity.this, AuditActivity.class));
+            }
+        });
+
+        //Verifies an audit as either correct or incorrect
+        incorrect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(auditor.equals(TitleScreen.accountID)) {
+                    Toast.makeText(AuditGalleryActivity.this
+                            ,"The verifier cannot be the same person who posted the audit."
+                            , Toast.LENGTH_SHORT).show();
+                }
+                else if((firstAuditor.equals(TitleScreen.accountID)) || (secondAuditor.equals(TitleScreen.accountID))) {
+                    Toast.makeText(AuditGalleryActivity.this
+                            , "Verifier has already submitted verification status for this audit."
+                            , Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    PostVerification postVerification = new PostVerification(
+                            TitleScreen.accountID,
+                            false
+                    );
+
+                    postedVerification = "false";
+                    postVerification(postVerification);
+                }
+            }
+        });
+        correct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(auditor.equals(TitleScreen.accountID)) {
+                    Toast.makeText(AuditGalleryActivity.this
+                            ,"The verifier cannot be the same person who posted the audit."
+                            , Toast.LENGTH_SHORT).show();
+                }
+                else if((firstAuditor.equals(TitleScreen.accountID)) || (secondAuditor.equals(TitleScreen.accountID))) {
+                    Toast.makeText(AuditGalleryActivity.this
+                            , "Verifier has already submitted verification status for this audit."
+                            , Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    PostVerification postVerification = new PostVerification(
+                            TitleScreen.accountID,
+                            true
+                    );
+
+                    postedVerification = "true";
+                    postVerification(postVerification);
+                }
             }
         });
     }
@@ -150,6 +204,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
         TextView status = findViewById(R.id.editStatus);
         TextView comments = findViewById(R.id.editComment);
 
+        auditor = dataList.get(0).getAuditor().toLowerCase();
+
         posterID.setText(dataList.get(0).getAuditor());
         timestamp.setText(dataList.get(0).getAsset().getTimestamp());
         location.setText(dataList.get(0).getAsset().getLocation());
@@ -182,5 +238,43 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
                 }
             }
         }
+    }
+    public void postVerification(final PostVerification postVerification) {
+        final TextView firstaudit = findViewById(R.id.editFirstAuditor);
+        final TextView secondaudit = findViewById(R.id.editSecondAuditor);
+        final Button incorrect = findViewById(R.id.IncorrectButton);
+        final Button correct = findViewById(R.id.CorrectButton);
+
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl("http://healthspace.simbachain.me/api/")
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+
+        SimbaClient client = retrofit.create(SimbaClient.class);
+        Call<PostVerification> call = client.postVerification(auditNo, postVerification);
+
+        call.enqueue(new Callback<PostVerification>() {
+            @Override
+            public void onResponse(Call<PostVerification> call, Response<PostVerification> response) {
+                if(firstaudit.getText().equals("")) {
+                    firstaudit.setText(postedVerification);
+                }
+                else if (secondaudit.getText().equals("")) {
+                    secondaudit.setText(postedVerification);
+                    incorrect.setEnabled(false);
+                    incorrect.setVisibility(View.GONE);
+                    correct.setEnabled(true);
+                    correct.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PostVerification> call, Throwable t) {
+                Toast.makeText(AuditGalleryActivity.this
+                        ,"Something went wrong. Check your internet connection."
+                        ,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
