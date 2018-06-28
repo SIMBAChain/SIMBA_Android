@@ -37,12 +37,10 @@ There are several screens in the app
 Modifying/Setting up getting
 ============================
 
-      * Change the URL in "`APIs.Swift <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/APIs.png>`_"
-      * Setup the model in "`Model.Swift <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Model.png>`_" under the folder "Models"
-      * Change the path in "`DefaultAPI.Swift <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/DefaultAPI.png>`_" under the folder "APIs"
-      * Setup the decoder in "`Models.Swift <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Models.png>`_"
-      * Change the `view controller <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/AuditViewController.png>`_ to use the right data for the model
-      * Change the `view layout and outlets <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Outlets.png>`_ to fit the new model
+      * Change the baseURL variable in "`TitleScreen.java <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/TitleScreenJava.png>`_" to your API of choice.
+      * Change the @GET and @POST commands in the "`SimbaClient.java <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/SimbaClientJavaInterface.png>`_" Interface to commands relating to your chosen API.
+      * Add or delete as many elements relating to your API as needed, making new classes where applicable, such as in "`GetSimba.java, Asset.java, and Item.java <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/GetSimbaAssetItemsJava.png>`_."
+      * Change the names `of the elements on the screens <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/DescriptiveScreenXML.png>`_ in order to fit the new data from your API.
 
 Links
 *****
