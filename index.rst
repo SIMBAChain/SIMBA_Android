@@ -7,11 +7,12 @@ SIMBA_iOS
 Installation
 ************
 
-* Hit the "`Clone or Download <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Install%201.png>`_" button in upper right corner of the github page
-* Hit the "`Open in Xcode <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Install2.png>`_" button.
-* Hit the "`Open Xcode <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Install3.png>`_" button on the popup.
-* Choose where you want to `save the project <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Install4.png>`_ and hit clone.
-* Xcode should `open the project <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Install5.png>`_.
+* Hit the "`Clone or Download <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/Install1.png>`_" button in upper right corner of the github page
+* Hit the "`Download ZIP <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/Install2.png>`_" button.
+* "`Extract the file <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/Install3.png>`_" with your extractor of choice.
+* Open Android Studio and click "`Open an existing Android Studio Project <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/Install4.png>`_."
+* Navigate to where the extracted project is and `select the project directory <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/Install5.png>`_ of the project (the one that contains the "app" folder) and hit "OK."
+* After a brief install, Android Studio should `open the project <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/Install6.png>`_.
 
 Prerequisites
 *************
