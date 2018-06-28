@@ -3,5 +3,5 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/avenir_next" />
+        android:font="@font/avenir_next_medium"/>
 </font-family>
