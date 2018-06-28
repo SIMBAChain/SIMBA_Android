@@ -44,7 +44,7 @@ public class AuditActivity extends AppCompatActivity {
         Gson gson = new GsonBuilder().registerTypeAdapterFactory(new ArrayAdapterFactory()).create();
 
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("http://healthspace.simbachain.me/api/")
+                .baseUrl(TitleScreen.baseURL)
                 .addConverterFactory(GsonConverterFactory.create(gson));
 
         Retrofit retrofit = builder.client(httpClient).build();

@@ -99,7 +99,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
     //Sends a list of data as a POST request to the api
     public void sendAudit(PostSimba postSimba) {
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("http://healthspace.simbachain.me/api/")
+                .baseUrl(TitleScreen.baseURL)
                 .addConverterFactory(GsonConverterFactory.create());
 
         Retrofit retrofit = builder.build();

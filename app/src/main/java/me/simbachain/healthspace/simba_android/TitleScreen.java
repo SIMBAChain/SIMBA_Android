@@ -19,6 +19,7 @@ public class TitleScreen extends AppCompatActivity implements AdapterView.OnItem
         "0x818ce4fb076ef541457f22b955af6bfa046c6e37", "0x2ba1d9aba1f0b1b12ad1b48a9c7cf327f1d17180",
         "0xad267928e21fe2bdd09417b20b6b8b0fa767c453", "0x4324ca587090d5d77942531cc18adde45836dd25",
         "0x647102ec4e63f571971e75ba4c5493a636af08bc", "0xd8e00bdfc99738a223db7821281d52de59c25b05"};
+    public static String baseURL = "http://healthspace.simbachain.me/api/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
