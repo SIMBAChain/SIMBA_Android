@@ -1,8 +1,8 @@
 .. figure:: Simba-NS.png
    :align:   center
    
-SIMBA_iOS
-*********
+SIMBA_Android
+*************
 
 Installation
 ************
@@ -26,13 +26,13 @@ Prerequisites
 Usage
 *****
 
-There are several views in the app
-==================================
+There are several screens in the app
+====================================
 
-    * `View Controller <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/View%20Controller.png>`_ | This is the main view of the app here you can go to the other views as well as select an account.
-    * `Most Recent Audits Scene <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Most%20Recent%20Audits%20Scene.png>`_ | This is the view that displays the last 10 audits you can click on any of them.
-    * `Detail View Controller <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Detail%20View%20Controller.png>`_  | This is the view that pops up whenever you click on one of the last 10 audits.
-    * `Post View Controller <https://github.com/SIMBAChain/SIMBA_iOS/blob/master/ScreenShots/Post%20View%20Controller.png>`_ | This is the view where you can post items. Fields can be left empty or populated when posting.
+    * `TitleScreen <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/TitleScreen.png>`_ | This is the main screen of the app, where you can access the other screens and select an account.
+    * `Most Recent Audits Screen <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MostRecentAuditsScreen.png>`_ | This is the screen that displays the last 10 audits. You can click on any of them.
+    * `Descriptive Screen <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/DescriptiveView.png>`_  | This is the screen that pops up whenever you click on one of the last 10 audits. It lists every element listed with the audit.
+    * `Post Screen <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/PostScreen.png>`_ | This is the screen where you can post an audit. Fields can be left empty or populated when posting.
 
 Modifying/Setting up getting
 ============================
