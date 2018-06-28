@@ -1,5 +1,6 @@
 package me.simbachain.healthspace.simba_android;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -48,6 +51,19 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
         Spinner userID = findViewById(R.id.user_id);
         Button incorrect = findViewById(R.id.IncorrectButton);
         Button correct = findViewById(R.id.CorrectButton);
+        final TextView auditNumber = findViewById(R.id.editAuditNumber);
+        final TextView posterID = findViewById(R.id.editPosterID);
+        final TextView IPFS = findViewById(R.id.editIPFS);
+        final TextView timeStamp = findViewById(R.id.editTimeStamp);
+        final TextView location = findViewById(R.id.editLocation);
+        final TextView name = findViewById(R.id.editName);
+        final TextView description = findViewById(R.id.editDescription);
+        final TextView status = findViewById(R.id.editStatus);
+        final TextView comments = findViewById(R.id.editComment);
+        final TextView verified = findViewById(R.id.editVerification);
+        final TextView auditorOne = findViewById(R.id.editFirstAuditor);
+        final TextView auditorTwo = findViewById(R.id.editSecondAuditor);
+
 
         progressDialog = new ProgressDialog(AuditGalleryActivity.this);
         progressDialog.setMessage("Loading....");
@@ -71,10 +87,193 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             }
         });
 
+        auditNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(auditNumber.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        posterID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(posterID.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        IPFS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(IPFS.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        timeStamp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(timeStamp.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(location.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(name.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        description.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(description.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(status.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        comments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(comments.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        verified.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(verified.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        auditorOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(auditorOne.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+        auditorTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuditGalleryActivity.this);
+                View view1 = getLayoutInflater().inflate(R.layout.dialog_layout, null);
+                TextView dialogText = view1.findViewById(R.id.dialogText);
+
+                dialogText.setText(auditorTwo.getText());
+
+                builder.setView(view1);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+
         //Verifies an audit as either correct or incorrect
         incorrect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Errors that may occur within the verification process
                 if(auditor.equals(TitleScreen.accountID)) {
                     Toast.makeText(AuditGalleryActivity.this
                             ,"The verifier cannot be the same person who posted the audit."
@@ -121,6 +320,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             }
         });
     }
+
+    //Determines which account is selected
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         TitleScreen.accountID = accounts[pos];
         Toast.makeText(this, "Your Accound ID is: " + TitleScreen.accountID, Toast.LENGTH_LONG).show();
@@ -128,6 +329,7 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
     }
     public void onNothingSelected(AdapterView<?> parent) {}
 
+    //Gets auditNumber, IPFC, and Verified fields from respective post from the audit activity
     private void getIncomingIntent() {
         if(getIntent().hasExtra("audit_no") && getIntent().hasExtra("ipfc") && getIntent().hasExtra("verified")) {
 
@@ -152,6 +354,7 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             setIncomingIntent(auditNumber, IPFC, Verified);
             Call<List<GetSimba>> call = client.getAuditItems(auditNumber);
 
+            //Begins setting everything up in the descriptive view
             call.enqueue(new Callback<List<GetSimba>>() {
                 @Override
                 public void onResponse(Call<List<GetSimba>> call, Response<List<GetSimba>> response) {
@@ -185,6 +388,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
 
         }
     }
+
+    //Sets the audit number, IPFC, and verified statuses to their respective fields
     private void setIncomingIntent(int audit, String ipfc, String verified) {
 
         TextView auditNumber = findViewById(R.id.editAuditNumber);
@@ -195,6 +400,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
         IPFC.setText(ipfc);
         Verified.setText(verified);
     }
+
+    //Sets all data to their respective fields
     public void generateData(List<GetSimba> dataList) {
         TextView posterID = findViewById(R.id.editPosterID);
         TextView timestamp = findViewById(R.id.editTimeStamp);
@@ -239,6 +446,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             }
         }
     }
+
+    //Allows the user to choose a verification
     public void postVerification(final PostVerification postVerification) {
         final TextView firstaudit = findViewById(R.id.editFirstAuditor);
         final TextView secondaudit = findViewById(R.id.editSecondAuditor);

@@ -22,6 +22,7 @@
     <string name="verification">Verification Status</string>
     <string name="firstauditor">First Auditor</string>
     <string name="secondauditor">Second Auditor</string>
+    <string name="cancel">CANCEL</string>
     <string-array name="user_accounts">
         <item>Account1: ******f625</item>
         <item>Account2: ******1457</item>
