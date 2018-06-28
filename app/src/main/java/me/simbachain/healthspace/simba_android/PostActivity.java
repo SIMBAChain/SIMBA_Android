@@ -1,7 +1,6 @@
 package me.simbachain.healthspace.simba_android;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,11 +14,8 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -67,7 +63,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
         });
         userID.setOnItemSelectedListener(this);
 
-        //Sends a POST request to the server
+        //Gathers a list of data to be added to the api
         toPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,6 +86,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
         });
     }
 
+    //Chooses what account is selected, defaults to the first account in the list
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         TitleScreen.accountID = accounts[pos];
         Toast.makeText(this, "Your Account ID is: " + TitleScreen.accountID, Toast.LENGTH_LONG).show();
@@ -99,6 +96,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    //Sends a list of data as a POST request to the api
     public void sendAudit(PostSimba postSimba) {
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl("http://healthspace.simbachain.me/api/")

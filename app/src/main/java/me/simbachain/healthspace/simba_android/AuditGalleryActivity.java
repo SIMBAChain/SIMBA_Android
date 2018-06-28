@@ -17,8 +17,6 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 import okhttp3.OkHttpClient;
@@ -65,6 +63,7 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
         final TextView auditorTwo = findViewById(R.id.editSecondAuditor);
 
 
+        //Loading bar for aesthetic purposes
         progressDialog = new ProgressDialog(AuditGalleryActivity.this);
         progressDialog.setMessage("Loading....");
         progressDialog.show();
@@ -87,6 +86,8 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
             }
         });
 
+        //Allows for the user to click a textbox and show them
+        //a popup of that text, for readability
         auditNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -321,7 +322,7 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
         });
     }
 
-    //Determines which account is selected
+    //Chooses what account is selected, defaults to the first account in the list
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         TitleScreen.accountID = accounts[pos];
         Toast.makeText(this, "Your Accound ID is: " + TitleScreen.accountID, Toast.LENGTH_LONG).show();

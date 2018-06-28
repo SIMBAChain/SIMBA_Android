@@ -34,6 +34,7 @@ public class AuditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_audit);
 
 
+        //Loading bar for aesthetic purposes
         progressDialog = new ProgressDialog(AuditActivity.this);
         progressDialog.setMessage("Loading....");
         progressDialog.show();
@@ -55,6 +56,7 @@ public class AuditActivity extends AppCompatActivity {
         Button toBack = findViewById(R.id.back_button);
         mRecyclerView = findViewById(R.id.my_recycler_view);
 
+        //Requests all data from from the audits page
         call.enqueue(new Callback<List<GetSimba>>() {
             @Override
             public void onResponse(Call<List<GetSimba>> call, Response<List<GetSimba>> response) {
@@ -80,6 +82,9 @@ public class AuditActivity extends AppCompatActivity {
         });
     }
 
+
+    //First takes the list, reverses it, and cuts off the last part, leaving the last ten audits
+    //Then sends data to the SimbaAdapter to parse for the RecyclerView
     public void generateDataList(List<GetSimba> dataList) {
         Collections.reverse(dataList);
         dataList.subList(11, dataList.size()).clear();

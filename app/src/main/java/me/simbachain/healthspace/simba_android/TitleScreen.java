@@ -52,6 +52,7 @@ public class TitleScreen extends AppCompatActivity implements AdapterView.OnItem
         userID.setOnItemSelectedListener(this);
     }
 
+    //Chooses what account is selected, defaults to the first account in the list
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         accountID = accounts[pos];
         Toast.makeText(this, "Your Accound ID is: " + accountID, Toast.LENGTH_LONG).show();

@@ -29,6 +29,7 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
         this.data = data;
     }
 
+    //Sets up everything in the RecyclerView
     class SimbaViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
 
@@ -46,6 +47,8 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
         }
     }
 
+
+    //Inflates the RecyclerView
     @Override
     public SimbaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
@@ -53,6 +56,8 @@ public class SimbaAdapter extends RecyclerView.Adapter<SimbaAdapter.SimbaViewHol
         return new SimbaViewHolder(v);
     }
 
+
+    //Sets everything to the RecyclerView
     @Override
     public void onBindViewHolder(SimbaViewHolder holder, final int position) {
         holder.hashId.setText("Audit No. " + data.get(position).getHashIdInString());
