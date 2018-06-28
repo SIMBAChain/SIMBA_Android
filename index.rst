@@ -18,7 +18,7 @@ Prerequisites
 .. note::
   These are already packaged in the app when you clone it.
 
-  * AlamoFire
+  * Retrofit
   * Swagger
 
 
@@ -47,7 +47,7 @@ Links
 *****
   `Swagger <https://swagger.io/>`_
   
-  `AlamoFire <https://github.com/Alamofire/Alamofire>`_
+  `Retrofit <http://square.github.io/retrofit/>`_
   
   `Github Repo <https://github.com/SIMBAChain>`_
   
