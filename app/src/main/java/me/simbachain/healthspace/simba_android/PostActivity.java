@@ -1,5 +1,6 @@
 package me.simbachain.healthspace.simba_android;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
             "0xad267928e21fe2bdd09417b20b6b8b0fa767c453", "0x4324ca587090d5d77942531cc18adde45836dd25",
             "0x647102ec4e63f571971e75ba4c5493a636af08bc", "0xd8e00bdfc99738a223db7821281d52de59c25b05"};
     String timeStamp;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,10 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
         toPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressDialog = new ProgressDialog(PostActivity.this);
+                progressDialog.setMessage("Posting...");
+                progressDialog.show();
+
                 timeStamp = new SimpleDateFormat("yyyy-MM-dd:HH:mm:ss:ms").format(new Date());
                 List<Item> items = new ArrayList<>();
                 items.add(new Item( description.getText().toString(),
@@ -110,6 +116,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
         call.enqueue(new Callback<PostSimba>() {
             @Override
             public void onResponse(Call<PostSimba> call, Response<PostSimba> response) {
+                progressDialog.dismiss();
                 Toast.makeText(PostActivity.this
                         ,"It has been posted!"
                         ,Toast.LENGTH_SHORT).show();
@@ -117,6 +124,7 @@ public class PostActivity extends AppCompatActivity implements AdapterView.OnIte
 
             @Override
             public void onFailure(Call<PostSimba> call, Throwable t) {
+                progressDialog.dismiss();
                 Toast.makeText(PostActivity.this
                         ,"Something went wrong. Check your internet connection"
                         ,Toast.LENGTH_SHORT).show();

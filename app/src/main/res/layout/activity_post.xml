@@ -106,6 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/location"
+                style="@style/TextShadow"
                 android:fontFamily="@font/fontavenirnext"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
@@ -144,6 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -181,6 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -219,6 +222,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -257,6 +261,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/comments"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>

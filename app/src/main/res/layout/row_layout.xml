@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:id="@+id/parent_layout">
+        android:id="@+id/parent_layout"
+        android:background="@android:color/transparent">
 
         <ImageView
             android:id="@+id/imageView"
@@ -30,6 +31,7 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/imageView"
             android:text="Title"
+            style="@style/TextShadow"
             android:fontFamily="@font/fontavenirnext"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -41,6 +43,7 @@
             android:layout_below="@+id/hashId"
             android:layout_toRightOf="@+id/imageView"
             android:text="Description"
+            style="@style/TextShadow"
             android:fontFamily="@font/fontavenirnext"
             android:textColor="#000000"
             android:textSize="20sp"/>

@@ -72,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/audit_no2"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:fontFamily="@font/fontavenirnext"
                 android:textSize="20sp" />
@@ -110,6 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/poster_no2"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -148,6 +150,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ipfs"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -186,6 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/timestamp"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -224,6 +228,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/location"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -262,6 +267,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -299,6 +305,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -337,6 +344,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -375,6 +383,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/comments"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -467,6 +476,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/verification"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -505,6 +515,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/firstauditor"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -543,6 +554,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/secondauditor"
+                style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
