@@ -53,6 +53,7 @@ These are already packaged in the app when you clone it.
 ### Most Recent Audits
 
 * From the Most Recent Audits Screen, you can see the ten most recent audits.
+* If you dislike which way the audits are listed (newest to oldest), you can click the "[REVERSE](https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MRAuditScreenReverse.png)" button to show them oldest to newest.
 * You can click on one of the "[audit tabs](https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MRAuditScreenRecycler.png)" to access the Descriptive Screen for that audit.
 * Or, you can press the "[BACK](https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MRAuditScreenBack.png)" button at the top to go back to the Title Screen.
 
