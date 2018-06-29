@@ -27,6 +27,7 @@ public class AuditActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     ProgressDialog progressDialog;
+    static boolean reversed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class AuditActivity extends AppCompatActivity {
         Call<List<GetSimba>> call = client.getAudits();
 
         Button toBack = findViewById(R.id.back_button);
+        Button reverse = findViewById(R.id.reverse_button);
         mRecyclerView = findViewById(R.id.my_recycler_view);
 
         //Requests all data from from the audits page
@@ -80,6 +82,19 @@ public class AuditActivity extends AppCompatActivity {
                 startActivity(new Intent(AuditActivity.this, TitleScreen.class));
             }
         });
+
+        reverse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(reversed) {
+                    reversed = false;
+                }
+                else {
+                    reversed = true;
+                }
+                startActivity(new Intent(AuditActivity.this, AuditActivity.class));
+            }
+        });
     }
 
 
@@ -87,7 +102,10 @@ public class AuditActivity extends AppCompatActivity {
     //Then sends data to the SimbaAdapter to parse for the RecyclerView
     public void generateDataList(List<GetSimba> dataList) {
         Collections.reverse(dataList);
-        dataList.subList(11, dataList.size()).clear();
+        dataList.subList(10, dataList.size()).clear();
+        if(reversed) {
+            Collections.reverse(dataList);
+        }
         mAdapter = new SimbaAdapter(this, dataList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(AuditActivity.this);
         mRecyclerView.setLayoutManager(layoutManager);
