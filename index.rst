@@ -4,6 +4,8 @@
 SIMBA_Android
 *************
 
+This app allows the user to connect to a Swagger-based API of their choice and, using Retrofit, allow the user to both get information from and send information to the API.
+
 Installation
 ************
 
