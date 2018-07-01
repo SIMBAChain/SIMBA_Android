@@ -58,6 +58,7 @@ TitleScreen
 Most Recent Audits
 ==================
       * From the Most Recent Audits Screen, you can see the ten most recent audits.
+      * If you dislike which way the audits are listed (newest to oldest), you can click the "`REVERSE <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MRAuditScreenReverse.png>`_" button to show them oldest to newest.
       * You can click on one of the "`audit tabs <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MRAuditScreenRecycler.png>`_" to access the Descriptive Screen for that audit.
       * Or, you can press the "`BACK <https://github.com/SIMBAChain/SIMBA_Android/blob/master/Screenshots/MRAuditScreenBack.png>`_" button at the top to go back to the Title Screen.
 
