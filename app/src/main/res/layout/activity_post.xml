@@ -98,7 +98,7 @@
             android:gravity="center">
 
             <Space
-                android:layout_width="18sp"
+                android:layout_width="18dp"
                 android:layout_height="match_parent" />
 
             <TextView
@@ -106,13 +106,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/location"
+                android:textAlignment="viewEnd"
                 style="@style/TextShadow"
                 android:fontFamily="@font/fontavenirnext"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
 
             <Space
-                android:layout_width="20sp"
+                android:layout_width="20dp"
                 android:layout_height="match_parent" />
 
             <EditText
@@ -144,6 +145,7 @@
                 android:id="@+id/Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
                 android:text="@string/name"
                 style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
@@ -183,6 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
+                android:textAlignment="viewEnd"
                 style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
@@ -222,6 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
+                android:textAlignment="viewEnd"
                 style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
@@ -260,6 +264,7 @@
                 android:id="@+id/Comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
                 android:text="@string/comments"
                 style="@style/TextShadow"
                 android:textColor="@color/colorWhite"
