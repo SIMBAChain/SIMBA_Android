@@ -42,7 +42,6 @@
         app:layout_constraintStart_toStartOf="@+id/rectangle"
         app:layout_constraintTop_toTopOf="@+id/rectangle" />
 
-
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
@@ -408,7 +407,7 @@
     <TableLayout
         android:id="@+id/tableLayout2"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -447,10 +446,14 @@
 
         </TableRow>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
     </TableLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tableLayout2">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -576,6 +579,8 @@
         </TableRow>
 
     </TableLayout>
+
+    </ScrollView>
     <Spinner
         android:id="@+id/user_id"
         android:layout_width="200dp"
