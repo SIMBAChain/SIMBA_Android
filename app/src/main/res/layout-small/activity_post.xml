@@ -30,7 +30,7 @@
     <ImageView
         android:id="@+id/simbalogo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginBottom="8sp"
         android:layout_marginTop="8sp"
         android:src="@drawable/simbalogowh2"
@@ -45,7 +45,7 @@
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8sp"
+        android:layout_marginEnd="2sp"
         android:background="#0000"
         android:text="@string/back_button"
         android:textColor="@color/colorBlue"
@@ -113,7 +113,7 @@
                 android:textSize="20sp" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
             <EditText
@@ -121,7 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorWhite"
-                android:ems="10"
+                android:ems="8"
                 android:inputType="text"
                 android:textSize="20sp"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -130,7 +130,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="5sp" />
+            android:layout_height="5dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                 android:fontFamily="@font/fontavenirnext"/>
 
             <Space
-                android:layout_width="20sp"
+                android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
             <EditText
@@ -161,7 +161,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorWhite"
-                android:ems="10"
+                android:ems="8"
                 android:textSize="20sp"
                 android:inputType="text"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -169,7 +169,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="5sp" />
+            android:layout_height="5dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                 android:fontFamily="@font/fontavenirnext"/>
 
             <Space
-                android:layout_width="20sp"
+                android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
             <EditText
@@ -200,7 +200,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100sp"
                 android:background="@color/colorWhite"
-                android:ems="10"
+                android:ems="8"
                 android:textSize="20sp"
                 android:inputType="text"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -209,7 +209,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="5sp" />
+            android:layout_height="5dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -232,7 +232,7 @@
                 android:fontFamily="@font/fontavenirnext"/>
 
             <Space
-                android:layout_width="20sp"
+                android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
             <EditText
@@ -240,7 +240,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorWhite"
-                android:ems="10"
+                android:ems="8"
                 android:textSize="20sp"
                 android:inputType="text"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -249,7 +249,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="5sp" />
+            android:layout_height="5dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -272,7 +272,7 @@
                 android:fontFamily="@font/fontavenirnext"/>
 
             <Space
-                android:layout_width="20sp"
+                android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
             <EditText
@@ -280,7 +280,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80sp"
                 android:background="@color/colorWhite"
-                android:ems="10"
+                android:ems="8"
                 android:textSize="20sp"
                 android:inputType="text"
                 android:fontFamily="@font/fontavenirnext"/>
@@ -291,15 +291,16 @@
         android:id="@+id/user_id"
         android:layout_width="200sp"
         android:layout_height="0sp"
-        android:layout_marginBottom="4sp"
-        android:layout_marginEnd="8sp"
-        android:layout_marginStart="8sp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="4sp"
         android:background="@color/colorWhite"
         android:fontFamily="@font/fontavenirnext"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 </android.support.constraint.ConstraintLayout>
