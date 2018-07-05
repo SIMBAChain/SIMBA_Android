@@ -452,6 +452,7 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
     public void postVerification(final PostVerification postVerification) {
         final TextView firstaudit = findViewById(R.id.editFirstAuditor);
         final TextView secondaudit = findViewById(R.id.editSecondAuditor);
+        final TextView verifiedStatus = findViewById(R.id.editVerification);
         final Button incorrect = findViewById(R.id.IncorrectButton);
         final Button correct = findViewById(R.id.CorrectButton);
 
@@ -476,6 +477,14 @@ public class AuditGalleryActivity extends AppCompatActivity implements AdapterVi
                     incorrect.setVisibility(View.GONE);
                     correct.setEnabled(true);
                     correct.setVisibility(View.GONE);
+                    if(Boolean.valueOf(firstaudit.getText().toString())
+                            && Boolean.valueOf(secondaudit.getText().toString())) {
+                        verifiedStatus.setText("true");
+                    }
+                    else if(!Boolean.valueOf(firstaudit.getText().toString())
+                            && !Boolean.valueOf(secondaudit.getText().toString())) {
+                        verifiedStatus.setText("false");
+                    }
                 }
             }
 
