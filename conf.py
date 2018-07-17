@@ -13,7 +13,7 @@ source_parsers = {
             '.md': CommonMarkParser,
         }
 master_doc = 'index'
-project = u'SIMBA_iOS'
+project = u'SIMBA_Android'
 copyright = str(datetime.now().year)
 version = 'latest'
 release = 'latest'
@@ -23,7 +23,7 @@ htmlhelp_basename = 'simba-ios'
 html_theme = 'sphinx_rtd_theme'
 file_insertion_enabled = False
 latex_documents = [
-  ('index', 'simba-ios.tex', u'SIMBA_iOS Documentation',
+  ('index', 'simba-Android.tex', u'SIMBA_Android Documentation',
    u'', 'manual'),
 ]
 
@@ -138,17 +138,17 @@ context = {
     ],
     'subprojects': [ 
     ],
-    'slug': 'simba-ios',
-    'name': u'SIMBA_iOS',
+    'slug': 'simba-Android',
+    'name': u'SIMBA_Android',
     'rtd_language': u'en',
-    'programming_language': u'swift',
-    'canonical_url': 'https://simba-ios.readthedocs.io/en/latest/',
+    'programming_language': u'Android',
+    'canonical_url': 'https://simba-Android.readthedocs.io/en/latest/',
     'analytics_code': 'None',
     'single_version': False,
     'conf_py_path': '/./',
     'api_host': 'https://readthedocs.org',
     'github_user': 'SIMBAChain',
-    'github_repo': 'SIMBA_iOS',
+    'github_repo': 'SIMBA_Android',
     'github_version': 'master',
     'display_github': True,
     'bitbucket_user': 'None',
